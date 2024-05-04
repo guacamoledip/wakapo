@@ -265,3 +265,6 @@ input,textarea{
     outline: none;
     font-size: 14px;
 }
+.submit{
+    background-color: aquamarine;
+}
