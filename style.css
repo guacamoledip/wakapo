@@ -107,45 +107,34 @@ ul {
     text-align: right;
 }
 .button{
-    /*矢印と下線の基点とするためrelativeを指定*/
     position: relative;
-    /*形状*/
     display: inline-block;
     padding: 0 20px;
     color: #333;
     text-decoration: none;
     outline: none;
 }
-/*矢印と下線の形状*/
 .button::before{
     content: '';
-    /*絶対配置で下線の位置を決める*/
     position: absolute;
     bottom:-8px;
     left:15%;
-    /*下線の形状*/    
     width: 85%;
     height: 1px;
     background:#333;
-    /*アニメーションの指定*/
     transition: all .3s;
 }
-
 .button::after{
     content: '';
-    /*絶対配置で矢印の位置を決める*/
     position: absolute;
     bottom:-3px;
     right:0;
-    /*矢印の形状*/    
     width: 15px;
     height:1px;
     background:#333;
     transform: rotate(35deg);
-    /*アニメーションの指定*/
     transition: all .3s;
 }
-/*hoverした際の移動*/
 .button:hover::before{
     left:30%;
 }
@@ -205,25 +194,34 @@ footer{
 }
 
 /* 問い合わせフォーム */
+.wappar{
+    display: grid;
+    grid-template-columns: 480px 480px;
+}
+.wappar-item{
+    display: flex;
+}
+
+/* 問い合わせフォーム */
 .contact-page {
     width: 960px;
     margin: 0 auto;
     padding: 40px 0;
 }
+.contact{
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
 .contact-ttl{
-    font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
     text-align: center;
-}
-.contact-form{
-    padding: 2rem 0;
 }
 .breadcrumb{
     display: flex;
     gap: 0 22px;
     list-style: none;
-    /* padding: 0; */
     font-size: .9em;
 }
 .breadcrumb li {
@@ -258,13 +256,28 @@ input,textarea{
     height: 100%;
     padding: 10px;
     margin-bottom: 20px;
-    box-sizing: border-box;
     border: 1px solid #333;
     border-radius: 5px;
-    resize: none;
-    outline: none;
     font-size: 14px;
 }
-.submit{
-    background-color: aquamarine;
+input:invalid{
+    border:solid 1px red;
+}
+.error-message{
+    font-size: 12px;
+    color: #ff7676;
+    display: none;
+}
+textarea:invalid + .error-message{
+    display: block;
+}
+.btn-submit{
+    text-align: center;
+}
+button{
+    border:1px solid #333;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-size: 14px;
+    cursor: pointer;
 }

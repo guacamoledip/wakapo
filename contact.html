@@ -9,20 +9,25 @@
     <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="contact contact-page">
-        <h1 class="contact-ttl">CONTACT</h1>
+    <div class="contact">
         <ol class="breadcrumb">
             <li><a href="index.html">HOME</a></li>
             <li>CONTACT</li>
         </ol>
     </div>
+    
+    <section class="contact-page">
+        <h1 class="contact-ttl">CONTACT ME :)</h1>
 
-    <section class="contact-form contact-page">
         <form action="#" method="post" name="contact">
             お名前<input type="text" name="name" placeholder="名前"><br>
-            メールアドレス<input type="email" name="email" placeholder="メールアドレス"><br>
-            お問い合わせ内容<textarea name="message" placeholder="お問い合わせ内容"></textarea><br>
-            <input class="submit" type="submit" value="送信">
+            メールアドレス<input type="email" name="email" placeholder="example@gmail.com"><br>
+            お問い合わせ内容<textarea name="message" placeholder="お問い合わせ内容"></textarea>
+            <div class="error-message">※ 入力必須です</div><br>
+
+            <div class="btn-submit">
+                <button type="submit">送信</button>
+            </div>
         </form>
     </section>
 
