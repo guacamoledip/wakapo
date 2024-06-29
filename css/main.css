@@ -1,5 +1,9 @@
 @charset "utf-8";
 
+
+html {
+    scroll-behavior: smooth;
+}
 body {
     width: 100%;
     height: 100%;
@@ -29,7 +33,7 @@ ul{
     display: flex;
     list-style: none;
 }
-li a{
+#mainvisual li a{
     text-decoration: none;
     color: #333;
     margin-left: 2em;
@@ -79,12 +83,63 @@ h3{
     display: block;
     text-align: center;
 }
-.about-btn{
-    text-align: center;
-}
-.about-btn a{
+.about-btn a {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 230px;
+    padding: 10px 0px 10px 25px;
+    line-height: 1.8;
     text-decoration: none;
-    color:#333;
+    color: #333;
+    transition: 0.3s ease-in-out;
+    font-weight: 500;
+}
+.about-btn a:before, .about-btn a:after {
+content: "";
+position: absolute;
+display: block;
+top: 50%;
+}
+.about-btn a:before {
+width: 0.5rem;
+height: 0.5rem;
+left: 1.1rem;
+border-top: solid 2px #333;
+border-right: solid 2px #333;
+z-index: 2;
+transform: translateY(-50%) rotate(45deg);
+transition: all 0.3s;
+}
+.about-btn a:after {
+left: 0;
+background: #B9D08B;
+z-index: 1;
+width: 3rem;
+height: 3rem;
+border-radius: 4rem;
+transform: translateY(-50%);
+transition: all 0.5s;
+}
+.about-btn a span {
+position: relative;
+transition: all 0.3s;
+z-index: 3;
+}
+.about-btn a:hover span {
+color: #fff;
+}
+.about-btn a:hover:before {
+left: 2.5rem;
+border-top: solid 2px #fff;
+border-right: solid 2px #fff;
+}
+.about-btn a:hover:after {
+right: 0;
+width: 100%;
+background: #749D2D;
 }
 
 
@@ -130,6 +185,20 @@ footer{
     text-align: center;
     line-height: 150px;
     margin-top: 100px;
+}
+
+
+/* トップへ戻るボタン ----------------------*/
+#page-top a {
+    padding: 20px;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+#page-top img{
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
 }
 
 

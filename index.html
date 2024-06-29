@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <title>WAKAPO</title>
+    <meta name="description" content="ポートフォリオサイト">
     <link href="https://fonts.googleapis.com/css2?family=IM+Fell+Double+Pica&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/main.css" />
@@ -22,12 +23,14 @@
             </nav>
         </header>
     <div>
-        <h2>Welcome to <span class="span">My Portfolio</span></h2>
+        <h2>Welcome to 
+            <span class="span">My Portfolio</span>
+        </h2>
     </div>
     </div>
 
     <main>
-        <section id="about">
+        <section id="about" class="fadeIn">
             <h3>ABOUT</h3>
             <div class="about-wrapper">
                 <div>
@@ -41,13 +44,13 @@
                         <p>2000年10月27日</p>
                     </div>
                     <div class="about-btn">
-                        <button><a href="about.html">view more</a></button>
+                        <a href="about.html"><span>view more</span></a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="works">
+        <section id="works" class="fadeIn">
             <h3>WORKS</h3>
             <div class="works-wrapper">
                 <div>
@@ -59,7 +62,7 @@
             </div>
         </section>
 
-        <section id="contact">
+        <section id="contact" class="fadeIn">
             <h3>CONTACT</h3>
             <p>ご覧いただきありがとうございます。<br>
                 ご連絡は下のフォームよりフォームよりお願いします。</p>
@@ -72,5 +75,13 @@
     <footer>
         <small>&copy; 2024 WAKABA NUMANO</small>
     </footer>
+    <div id="page-top">
+        <a href="#"><img src="image/top.png"></a>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="js/main.js" defer></script>
+
+
 </body>
 </html>
