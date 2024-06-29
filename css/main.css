@@ -187,7 +187,16 @@ footer{
     margin-top: 100px;
 }
 
-
+/* スクロール時にふわっと表示させる */
+.fadeIn {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: 3s;
+}
+.fadeIn.active {
+    opacity: 1;
+    transform: translateY(0);
+}
 /* トップへ戻るボタン ----------------------*/
 #page-top a {
     padding: 20px;
@@ -203,20 +212,11 @@ footer{
 
 
 /* 問い合わせフォーム ----------------------*/
-.contact-page {
-    width: 960px;
-    margin: 0 auto;
-    padding: 40px 0;
-}
+
 .contact{
     width: 960px;
     margin: 0 auto;
     margin-top: 3rem;
-}
-.contact-ttl{
-    font-weight: bold;
-    margin-bottom: 40px;
-    text-align: center;
 }
 .breadcrumb{
     display: flex;
@@ -251,33 +251,14 @@ footer{
     color: #333333;
     text-decoration: none;
 }
-input,textarea{
+
+/* 送信完了ページ ----------------------*/
+.contact-page{
     width: 100%;
-    height: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #333;
-    border-radius: 5px;
-    font-size: 14px;
-}
-input:invalid{
-    border:solid 1px red;
-}
-.error-message{
-    font-size: 12px;
-    color: #ff7676;
-    display: none;
-}
-textarea:invalid + .error-message{
-    display: block;
-}
-.btn-submit{
+    height: calc(100vh - 6rem - 271px);
+    margin: 0 auto;
+    margin-top: 3rem;
     text-align: center;
-}
-button{
-    border:1px solid #333;
-    border-radius: 5px;
-    padding: 10px 30px;
-    font-size: 14px;
-    cursor: pointer;
+    font-size: 1em;
+    line-height: 2em;
 }
