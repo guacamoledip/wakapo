@@ -211,8 +211,51 @@ footer{
 }
 
 
-/* 問い合わせフォーム ----------------------*/
+/* ABOUTページ---------------------- */
+.about-page{
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+}
+.about-box{
+    width: 400px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+.about-box p{
+    margin-bottom: 10px;
+}
+.name{
+    font-size: 10px;
+    margin-left: 2em;
+}
+.line-top{
+    border-top: #333 1px solid;
+}
 
+.skill-page{
+    width: 960px;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+h5{
+    font-size: 20px;
+}
+.skill-wrapper{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2rem;
+}
+.skill-design, .skill-code{
+    width: 400px;
+    text-align: center;
+}
+
+
+
+
+
+/* 問い合わせフォーム ----------------------*/
 .contact{
     width: 960px;
     margin: 0 auto;
@@ -251,7 +294,6 @@ footer{
     color: #333333;
     text-decoration: none;
 }
-
 /* 送信完了ページ ----------------------*/
 .contact-page{
     width: 100%;
