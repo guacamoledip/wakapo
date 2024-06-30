@@ -38,6 +38,9 @@ ul{
     color: #333;
     margin-left: 2em;
 }
+#mainvisual li a:hover{
+    color: #749D2D;
+}
 h2{
     position: absolute;
     top:40%;
