@@ -29,6 +29,11 @@ header{
     align-items: center;
     padding: 0 30px
 }
+h1 a{
+    text-decoration: none;
+    color: #333;
+    font-size: 30px;
+}
 ul{
     display: flex;
     list-style: none;
@@ -47,10 +52,56 @@ h2{
     left: 20%;
     font-size: 38px;
 }
-.span{
+.slide-in_text{
     color: #B9D08B;
+    margin-left: 180px;
 }
-
+/* 流れる文字 */
+#mainvisual h2{
+    overflow: hidden;
+}
+.slide-in {
+    overflow: hidden;
+    display: inline-block;
+}
+.slide-in_inner {
+    display: inline-block;
+}
+.leftAnime{
+    opacity: 0;
+}
+.slideAnimeLeftRight {
+    animation-name:slideTextX100;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes slideTextX100 {
+    from {
+    transform: translateX(-100%);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
+.slideAnimeRightLeft {
+    animation-name:slideTextX-100;
+    animation-duration:3s;
+    animation-fill-mode:forwards;
+    opacity: 0;
+}
+@keyframes slideTextX-100 {
+    from {
+    transform: translateX(100%);
+    opacity: 0;
+    }
+    to {
+    transform: translateX(0);
+    opacity: 1;
+    }
+}
 
 /* ABOUT -------------------------*/
 h3{
@@ -59,12 +110,14 @@ h3{
     margin: 100px 0 50px;
 }
 #about{
-    width: 800px;
+    width: 60%;
     height: 600px;
     margin: 0 auto;
 }
 .about-wrapper{
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .about-img{
     width: 400px;
@@ -101,54 +154,53 @@ h3{
     font-weight: 500;
 }
 .about-btn a:before, .about-btn a:after {
-content: "";
-position: absolute;
-display: block;
-top: 50%;
+    content: "";
+    position: absolute;
+    display: block;
+    top: 50%;
 }
 .about-btn a:before {
-width: 0.5rem;
-height: 0.5rem;
-left: 1.1rem;
-border-top: solid 2px #333;
-border-right: solid 2px #333;
-z-index: 2;
-transform: translateY(-50%) rotate(45deg);
-transition: all 0.3s;
+    width: 0.5rem;
+    height: 0.5rem;
+    left: 1.1rem;
+    border-top: solid 2px #333;
+    border-right: solid 2px #333;
+    z-index: 2;
+    transform: translateY(-50%) rotate(45deg);
+    transition: all 0.3s;
 }
 .about-btn a:after {
-left: 0;
-background: #B9D08B;
-z-index: 1;
-width: 3rem;
-height: 3rem;
-border-radius: 4rem;
-transform: translateY(-50%);
-transition: all 0.5s;
+    left: 0;
+    background: #B9D08B;
+    z-index: 1;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 4rem;
+    transform: translateY(-50%);
+    transition: all 0.5s;
 }
 .about-btn a span {
-position: relative;
-transition: all 0.3s;
-z-index: 3;
+    position: relative;
+    transition: all 0.3s;
+    z-index: 3;
 }
 .about-btn a:hover span {
-color: #fff;
+    color: #fff;
 }
 .about-btn a:hover:before {
-left: 2.5rem;
-border-top: solid 2px #fff;
-border-right: solid 2px #fff;
+    left: 2.5rem;
+    border-top: solid 2px #fff;
+    border-right: solid 2px #fff;
 }
 .about-btn a:hover:after {
-right: 0;
-width: 100%;
-background: #749D2D;
+    right: 0;
+    width: 100%;
+    background: #749D2D;
 }
-
 
 /* WORKS -------------------------*/
 #works{
-    width: 900px;
+    width: 70%;
     margin: 0 auto;
 }
 .works-wrapper{
@@ -162,10 +214,9 @@ background: #749D2D;
     object-fit: cover;
 }
 
-
 /* CONTACT -------------------------*/
 #contact{
-    width: 900px;
+    width: 90%;
     margin: 0 auto;
 }
 #contact p{
@@ -178,16 +229,17 @@ background: #749D2D;
     text-align: center;
 }
 
-
 /* フッター -------------------------*/
 footer{
     width: 100%;
     height: 150px;
-    background-color: #749D2D;
     color: #fff;
     text-align: center;
     line-height: 150px;
     margin-top: 100px;
+    background-color: #749d2d;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 80 40' width='80' height='40'%3E%3Cpath fill='%23b9d08b' fill-opacity='0.15' d='M0 40a19.96 19.96 0 0 1 5.9-14.11 20.17 20.17 0 0 1 19.44-5.2A20 20 0 0 1 20.2 40H0zM65.32.75A20.02 20.02 0 0 1 40.8 25.26 20.02 20.02 0 0 1 65.32.76zM.07 0h20.1l-.08.07A20.02 20.02 0 0 1 .75 5.25 20.08 20.08 0 0 1 .07 0zm1.94 40h2.53l4.26-4.24v-9.78A17.96 17.96 0 0 0 2 40zm5.38 0h9.8a17.98 17.98 0 0 0 6.67-16.42L7.4 40zm3.43-15.42v9.17l11.62-11.59c-3.97-.5-8.08.3-11.62 2.42zm32.86-.78A18 18 0 0 0 63.85 3.63L43.68 23.8zm7.2-19.17v9.15L62.43 2.22c-3.96-.5-8.05.3-11.57 2.4zm-3.49 2.72c-4.1 4.1-5.81 9.69-5.13 15.03l6.61-6.6V6.02c-.51.41-1 .85-1.48 1.33zM17.18 0H7.42L3.64 3.78A18 18 0 0 0 17.18 0zM2.08 0c-.01.8.04 1.58.14 2.37L4.59 0H2.07z'%3E%3C/path%3E%3C/svg%3E");
+    background-repeat: repeat;
 }
 
 /* スクロール時にふわっと表示させる */
@@ -214,9 +266,12 @@ footer{
 }
 
 
+
+
+
 /* ABOUTページ---------------------- */
 .about-page{
-    width: 960px;
+    width: 60%;
     margin: 0 auto;
     display: flex;
 }
@@ -235,9 +290,8 @@ footer{
 .line-top{
     border-top: #333 1px solid;
 }
-
 .skill-page{
-    width: 960px;
+    width: 60%;
     margin: 0 auto;
     margin-top: 5rem;
 }
