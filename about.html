@@ -16,40 +16,55 @@
         </ol>
     </div>
 
-    <h3>ABOUT</h3>
+<main>
     <section class="about-page">
         <div>
             <img class="about-img" src="/image/me.png" alt="">
         </div>
         <div class="about-box">
-            <p>沼能 若葉<span class="name">Numano Wakaba</span></p>
-            <div class="line-top">
-                <p>栃木県出身23歳です。<br>
-                    現在、Webデザイナーになるために日々勉強しています。<br>
-                    </p>
+            <div class="about-name">
+                <p><span style="font-size: 30px; font-weight: bold;">沼能 若葉</span></p>
+                <p><span style="font-size: 12px; margin-left: 2rem; vertical-align: bottom;"> Numano Wakaba </span></p>
+            </div>
+            <div class="about-box-profile">
+                <div class="about-box-profile-text">
+                    <img class="img-about" src="/image/leaf2.svg" alt="">
+                    <div>
+                        <h6>自己紹介</h6>
+                        <p>栃木県出身</p>
+                        <p>2000年10月27日生まれ</p>
+                    </div>
+                </div>
+                <div class="about-box-profile-text">
+                    <img class="img-about" src="/image/kaidan.svg" alt="">
+                    <div>
+                        <h6>経歴</h6>
+                        <p>東京農業大学 農学部 卒業</p>
+                        <p>株式会社 京葉興業 退職</p>
+                    </div>
+                </div>
+                <div class="about-box-profile-text">
+                    <img class="img-about" src="/image/heart.svg" alt="">
+                    <div>
+                        <h6>趣味・好きなもの</h6>
+                        <p>漫画・アニメ鑑賞</p>
+                        <p>バレーボール</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section class="skill-page">
-        <h5>skill</h5>
-        <div class="skill-wrapper">
-            <div class="skill-design">
-                <div>
-                    <img src="/image/design.png" alt="">
-                </div>
-                <p>デザインの４原則を活用することで、視覚的に魅力的で、使いやすいデザインを作り上げることを心がけています。</p>
-                <p>PhotoShop、Illustrator</p>
-            </div>
-            <div class="skill-code">
-                <div>
-                    <img src="/image/coding.png" alt="">
-                </div>
-                <p>コードを書く時に、可読性の高いコードを作り上げることを心がけています。</p>
-                <p>HTML、CSS、JavaScript、PHP</p>
-            </div>
-        </div>
+    <section>
+        <h5>使える言語・ツール</h5>
+        <div class="skill-wrapper"></div>
     </section>
+
+    <section>
+        <h5>My Portfolio</h5>
+    </section>
+
+</main>
 
 
     <footer>
@@ -57,5 +72,31 @@
             <small>&copy; 2024 WAKAPO</small>
         </div>
     </footer>
+
+    
+    <script src="https://unpkg.com/microcms-js-sdk@latest/dist/umd/microcms-js-sdk.js"></script>
+    <script>
+        const { createClient } = microcms;
+    
+        const client = createClient({
+            serviceDomain: 'wakapo',
+            apiKey: 'cssAThpDIRSwHeX2NBqi3vJBE8XMQDUeEbX2',
+        })
+        client.get({ endpoint: 'skills'}).then((res) => {
+            let htmlString = '';
+            res.contents.forEach(skill => {
+                htmlString += `
+                <div class="skill-design">
+                    <div>
+                        <img src="${skill.image.url}" alt="">
+                    </div>
+                    <p>${skill.text}</p>
+                    <p>${skill.skill}</p>
+                </div>
+                `
+            });
+            document.querySelector('.skill-wrapper').innerHTML = htmlString;
+        })
+    </script>
 </body>
 </html>
