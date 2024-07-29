@@ -455,6 +455,7 @@ dd {
     /* ヘッダー */
     #mainvisual {
         height: 50vh;
+        margin-bottom: 50px;
     }
     .leaf {
         width: 250px;
