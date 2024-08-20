@@ -324,6 +324,24 @@ h5{
     line-height: 1.8;
     margin-top: 1.5rem;
 }
+/* 今後 */
+.future-wrapper {
+    margin-top: 2rem;
+    background-color: #749d2d;
+    color: #F8FAF1;
+    padding: 50px;
+}
+.future-wrapper_box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
+.future-wrapper_box img {
+    margin-right: 50px;
+}
+h7 {
+    font-size: 24px;
+}
 
 /* 制作物ページ---------------------- */ */
 .work {
@@ -553,5 +571,17 @@ dd {
     }
     .contact {
         width: 100%;
+    }
+    .future-wrapper_box {
+        flex-direction: column;
+    }
+    .future-wrapper_box img {
+        margin:0 auto 10px;
+    }
+    h7 {
+        font-size: 18px;
+    }
+    .future-wrapper_box p {
+        font-size: 13px;
     }
 }
