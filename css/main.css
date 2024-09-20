@@ -214,9 +214,10 @@ h3{
 
 /* WORKS -------------------------*/
 .works-wrapper{
-    display: flex;
-    /* flex-wrap: wrap; */
-    /* justify-content: space-around; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+    align-items: center;
 }
 .works-img{
     width: 400px;
