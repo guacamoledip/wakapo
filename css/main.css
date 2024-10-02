@@ -37,7 +37,7 @@ h1 a{
     color: #333;
     font-size: 30px;
 }
-ul{
+nav ul{
     display: flex;
     list-style: none;
 }
@@ -287,8 +287,45 @@ h3{
 h6 {
     font-size: 24px;
     font-weight: normal;
-    margin-bottom: 1rem;
 }
+
+/* 経歴 */
+.timeline {
+    list-style: none;
+}
+.timeline li {
+    margin-bottom: 60px;
+}
+.timeline li {
+    overflow: hidden;
+    margin: 0;
+    position: relative;
+}
+.timeline-date {
+    width: 110px;
+    float: left;
+    margin-top: 20px;
+}
+.timeline-content {
+    width: 75%;
+    float: left;
+    border-left: 3px #e5e5d1 solid;
+    padding: 0 0 40px 30px;
+}
+.timeline-content:before {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #6fc173;
+    position: absolute;
+    left: 106px;
+    top: 24px;
+    border-radius: 100%;
+}
+.timeline-content p{
+    line-height: 1.8;
+}
+
 /* スキル */
 h5{
     font-size: 25px;
